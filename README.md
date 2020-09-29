@@ -1,4 +1,4 @@
-# Ember Data Live Updates Updates
+# Ember Data Live Updates
 
 A repo containing example code of getting live updates working with Ember Data with several different backends.
 
