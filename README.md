@@ -1,6 +1,6 @@
-# JSON:API Live Updates
+# Ember Data Live Updates Updates
 
-A repo containing example code of getting live updates working with JSON:API with various setups.
+A repo containing example code of getting live updates working with Ember Data with several different backends.
 
 Details in each example folder's README.
 
