@@ -8,13 +8,48 @@ The following technologies are used:
 * Database: Postgres
 * WebSocket connection: Action Cable
 
+## Requirements
+
+* [Ruby](https://www.ruby-lang.org/en/)
+* [Postgres](https://postgresapp.com/)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://yarnpkg.com/)
+* [Ember CLI](https://guides.emberjs.com/release/getting-started/quick-start/#toc_install-ember)
+
 ## Installation
+
+```bash
+$ cd api
+$ bundle install
+$ cd ../frontend
+$ yarn install
+```
 
 ## Running
 
+In one terminal:
+
+```bash
+$ cd api
+$ rails s
+```
+
+In another terminal:
+
+```bash
+$ cd frontend
+$ ember s
+```
+
 ## Trying It Out
 
+Visit the app at <http://localhost:4200> in two different tabs.
+
+Add a todo in one tab. You should see the todo appear in the list in both tabs.
+
 ## Implementation Notes
+*More details can be found in the blog post [Ember Data Live Updates](https://codingitwrong.com/2020/10/02/ember-data-live-updates-with-rails.html).*
+
 We set up our Rails backend with API mode, and we left Action Cable in by default.
 
 We set up our database to use UUIDs as primary keys. This will make it easier to prevent duplicate records on the frontend.
