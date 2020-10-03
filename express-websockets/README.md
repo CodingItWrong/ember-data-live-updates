@@ -36,7 +36,7 @@ $ yarn start
 In another terminal:
 
 ```bash
-$ cd api
+$ cd frontend
 $ ember s
 ```
 
