@@ -50,8 +50,6 @@ Add a todo in one tab. You should see the todo appear in the list in both tabs.
 In our Sequelize migration to create the Todos table, we set it up to use a UUID field as the primary key. This will make it easier to prevent duplicate records on the frontend.
 
 ```js
-'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('Todos', {
