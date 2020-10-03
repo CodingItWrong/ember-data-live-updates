@@ -8,11 +8,43 @@ The following technologies are used:
 * Database: Postgres
 * WebSocket connection: `websocket`
 
+## Requirements
+
+* [Postgres](https://postgresapp.com/)
+* [Node.js](https://nodejs.org/)
+* [Yarn](https://yarnpkg.com/)
+* [Ember CLI](https://guides.emberjs.com/release/getting-started/quick-start/#toc_install-ember)
+
 ## Installation
+
+```bash
+$ cd api
+$ yarn install
+$ cd ../frontend
+$ yarn install
+```
 
 ## Running
 
+In one terminal:
+
+```bash
+$ cd api
+$ yarn start
+```
+
+In another terminal:
+
+```bash
+$ cd api
+$ ember s
+```
+
 ## Trying It Out
+
+Visit the app at <http://localhost:4200> in two different tabs.
+
+Add a todo in one tab. You should see the todo appear in the list in both tabs.
 
 ## Implementation Notes
 In our Sequelize migration to create the Todos table, we set it up to use a UUID field as the primary key. This will make it easier to prevent duplicate records on the frontend.
