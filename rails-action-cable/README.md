@@ -1,4 +1,4 @@
-# Ember Data Action Cable
+# Ember Data Live Updates with Rails and Action Cable
 
 This repo contains an Ember frontend and Rails backend. The Rails backend sends live updates to the frontend via a WebSocket connection.
 

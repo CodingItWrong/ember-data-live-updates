@@ -1,4 +1,4 @@
-# Ember Data Action Cable
+# Ember Data Live Updates with Express
 
 This repo contains an Ember frontend and Express backend. The Express backend sends live updates to the frontend via a WebSocket connection.
 
