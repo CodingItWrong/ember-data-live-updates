@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = function (environment) {
+module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-data-action-cable',
+    modulePrefix: 'live-updates-frontend',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -13,14 +13,14 @@ module.exports = function (environment) {
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
-        Date: false,
-      },
+        Date: false
+      }
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
+    }
   };
 
   if (environment === 'development') {
@@ -29,8 +29,6 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV['ember-cli-mirage'] = { enabled: false };
-    ENV.apiHost = 'http://localhost:3000';
   }
 
   if (environment === 'test') {

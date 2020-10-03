@@ -1,15 +1,20 @@
 class TodoResource < JSONAPI::Resource
   after_create :notify_clients
 
-  attributes :id, :name
+  attribute :name
+
+  def self.creatable_fields(context)
+    super + %i[id]
+  end
 
   private
 
   def notify_clients
-    serializer = JSONAPI::ResourceSerializer.new(TodoResource)
-    resource = TodoResource.new(_model, nil)
-    hash = serializer.object_hash(resource, nil)
+    ActionCable.server.broadcast 'todos', serialized_model
+  end
 
-    ActionCable.server.broadcast 'todos', hash
+  def serialized_model
+    serializer = JSONAPI::ResourceSerializer.new(TodoResource)
+    serializer.object_hash(self, nil)
   end
 end
